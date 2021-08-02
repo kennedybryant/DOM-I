@@ -40,3 +40,55 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+document.querySelector('nav a').textContent = 'Services';
+document.querySelector('nav a:nth-of-type(2)').textContent = 'Products';
+document.querySelector('nav a:nth-of-type(3)').textContent = 'Visions';
+document.querySelector('nav a:nth-of-type(4)').textContent = 'Features';
+document.querySelector('nav a:nth-of-type(5)').textContent = 'About';
+document.querySelector('nav a:nth-of-type(6)').textContent = 'Contact';
+
+const navColor = document.querySelectorAll('a');
+navColor.forEach((item) => (item.style.color = 'green'));
+
+const addLink = document.querySelector('nav'); 
+const new1 = document.createElement('a');
+new1.textContent = 'End Example';
+new1.href = '#';
+new1.style.color = 'green';
+addLink.appendChild(new1);
+
+const new2 = document.createElement('a');
+new2.textContent = 'Beginning Example';
+new2.href = '#';
+new2.style.color = 'green';
+addLink.prepend(new2);
+
+document.querySelector('h1').textContent = siteContent['cta']['h1'];
+document.querySelector('button').textContent = siteContent['cta']['button'];
+
+const headerImg = document.querySelector('#cta-img');
+headerImg.src = siteContent['cta']['img-src'];
+
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+const h4 = document.querySelectorAll('h4');
+h4[0].textContent = siteContent['main-content']['features-h4']
+h4[1].textContent = siteContent['main-content']['about-h4']
+h4[2].textContent = siteContent['main-content']['services-h4']
+h4[3].textContent = siteContent['main-content']['product-h4']
+h4[4].textContent = siteContent['main-content']['vision-h4']
+h4[5].textContent = siteContent['contact']['contact-h4']
+
+const p = document.querySelectorAll('p');
+p[0].textContent = siteContent['main-content']['features-content']
+p[1].textContent = siteContent['main-content']['about-content']
+p[2].textContent = siteContent['main-content']['services-content']
+p[3].textContent = siteContent['main-content']['product-content']
+p[4].textContent = siteContent['main-content']['vision-content']
+p[5].innerHTML = '123 Way 456 Street <br> Somewhere, USA';
+p[6].textContent = siteContent['contact']['phone']
+p[7].textContent = siteContent['contact']['email']
+
+document.querySelector('footer').textContent = siteContent['footer']['copyright'];
